@@ -1,0 +1,35 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        // NUCLEO_L476RG
+        {
+            "label": "Build for L476RG: DEBUG",
+            "type": "shell",
+            "command": "west build -b nucleo_l476rg/stm32l476xx -d stm32/build/nucleo_l476rg stm32/ -- -DOVERLAY_CONFIG=debug.conf && cp stm32/build/nucleo_l476rg/compile_commands.json stm32/build/compile_commands.json",
+            "group": "build",
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "Build for L476RG: DEBUG (Pristine)",
+            "type": "shell",
+            "command": "west build -b nucleo_l476rg/stm32l476xx -d stm32/build/nucleo_l476rg stm32/ -p always -- -DOVERLAY_CONFIG=debug.conf && cp stm32/build/nucleo_l476rg/compile_commands.json stm32/build/compile_commands.json",
+            "group": "build",
+            "problemMatcher": "$gcc"
+        },
+        //ESP_C6
+{
+            "label": "Build for ESP32_C6: DEBUG",
+            "type": "shell",
+            "command": "west build -b esp32c6_devkitc/esp32c6/hpcore -d stm32/build/esp32c6 stm32/ -- -DOVERLAY_CONFIG=debug.conf -DEXTRA_DTC_OVERLAY_FILE=boards/esp32c6_devkitc.overlay && cp stm32/build/esp32c6/compile_commands.json stm32/build/compile_commands.json",
+            "group": "build",
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "Build for ESP32_C6: DEBUG (Pristine)",
+            "type": "shell",
+            "command": "west build -b esp32c6_devkitc/esp32c6/hpcore -d stm32/build/esp32c6 stm32/ -p always -- -DOVERLAY_CONFIG=debug.conf -DEXTRA_DTC_OVERLAY_FILE=boards/esp32c6_devkitc.overlay && cp stm32/build/esp32c6/compile_commands.json stm32/build/compile_commands.json",
+            "group": "build",
+            "problemMatcher": "$gcc"
+        }
+    ]
+}

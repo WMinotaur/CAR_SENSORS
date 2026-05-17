@@ -1,0 +1,13 @@
+
+# Build Directory
+build
+
+# Zephyr Installation
+/.west/
+/bootloader/
+/modules/
+/zephyr/
+/tools/
+
+# Ozone project files (generated or user-specific)
+debug/

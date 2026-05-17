@@ -1,0 +1,98 @@
+{
+    // --- Files Association ---
+    "files.associations": {
+        ".clang-format": "yaml",
+        ".clangd": "yaml",
+        "*.overlay": "dts",
+        "*.dtsi": "dts",
+        "*.dts": "dts",
+        "CMakeLists.txt": "cmake",
+        "*.cmake": "cmake"
+    },
+    // --- CMake ---
+    "cmake.configureOnOpen": false,
+    "cmake.automaticReconfigure": false,
+    "cmake.autoSelectActiveFolder": false,
+    "cmake.enableAutomaticKitScan": false,
+    "cmake.options.statusBarVisibility": "hidden",
+    "[cmake]": {
+        "editor.defaultFormatter": "wysaid.clion-cmake-format",
+    },
+    // --- C/C++ Settings: clangd ---
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "clangd.arguments": [
+        "--header-insertion=never",
+        "--background-index",
+        "--compile-commands-dir=${workspaceFolder}/stm32/build"
+    ],
+    "clangd.checkUpdates": false,
+    "[c]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+        "editor.tabSize": 2,
+        "editor.detectIndentation": false,
+        "editor.formatOnSave": true
+    },
+    "[cpp]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+        "editor.tabSize": 2,
+        "editor.detectIndentation": false,
+        "editor.formatOnSave": true
+    },
+    // --- C/C++ Settings: cpp_tools ---
+    // "C_Cpp.intelliSenseEngine": "default",
+    // "C_Cpp.default.configurationProvider": "",
+    // "C_Cpp.clang_format_style": "file",
+    //
+    // "[c]": {
+    //     "editor.defaultFormatter": "ms-vscode.cpptools",
+    //     "editor.tabSize": 2
+    // },
+    //
+    // "[cpp]": {
+    //     "editor.defaultFormatter": "ms-vscode.cpptools",
+    //     "editor.tabSize": 2
+    // },
+    // --- Python ---
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+    },
+    // --- DeviceTree ---
+    "[dts]": {
+        "editor.defaultFormatter": "nordic-semiconductor.nrf-devicetree",
+    },
+    // --- Other Settings ---
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "extensions.ignoreRecommendations": true,
+    "git.autofetch": true,
+    "telemetry.feedback.enabled": false,
+    // --- Workspace Visibility ---
+    "files.exclude": {
+        "zephyr/": true,
+        "modules/": true,
+        "bootloader/": true,
+        "tools/": true,
+        ".west/": true
+    },
+    "search.exclude": {
+        "zephyr/": true,
+        "modules/": true,
+        "bootloader/": true,
+        "tools/": true
+    },
+    // --- nRF Settings ---
+    "nrf-connect.applications": [
+        "${workspaceFolder}/stm32"
+    ],
+    "nrf-connect.west.env": {
+        "$base": "terminal"
+    },
+    "nrf-connect.activeAppFollowActiveEditor": false,
+    "devicetree.defaultBoard": "nucleo_l476rg/stm32l476xx",
+    "devicetree.zephyr": "${workspaceFolder}/zephyr",
+    "devicetree.modules": [
+        "${workspaceFolder}",
+        "${workspaceFolder}/modules/*",
+        "${workspaceFolder}/bootloader/*"
+    ],
+    "kconfig.zephyr.base": "${workspaceFolder}/zephyr"
+}
