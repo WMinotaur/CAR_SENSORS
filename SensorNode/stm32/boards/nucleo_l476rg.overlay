@@ -6,7 +6,7 @@
 
     &can1 {
         status = "okay";
-        bus-speed = <500000>;
+        bus-speed = <1000000>;
         pinctrl-0 = <&can1_rx_pa11 &can1_tx_pa12>;
         pinctrl-names = "default";
     };
@@ -23,6 +23,18 @@
             int-gpios = <&gpioc 4 GPIO_ACTIVE_HIGH>;
             smplrt-div = <249>;
         };
+        
 
 
+    };
+
+    {
+    hc_sr04_0: hc-sr04 {
+        compatible = "elec,hc-sr04";
+        /* PA9 odpowiada pinowi D8 na złączu Arduino */
+        trigger-gpios = <&gpioa 9 GPIO_ACTIVE_HIGH>;
+        /* PC7 odpowiada pinowi D9 na złączu Arduino */
+        echo-gpios = <&gpioc 7 GPIO_ACTIVE_HIGH>;
+        status = "okay";
+        };
     };
