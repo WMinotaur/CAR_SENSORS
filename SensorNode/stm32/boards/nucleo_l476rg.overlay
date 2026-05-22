@@ -2,6 +2,14 @@
         chosen {
             zephyr,can-primary = &can1;
         };
+        hc_sr04_0: hc-sr04 {
+        compatible = "hc-sr04";
+        /* PA9 odpowiada pinowi D8 na złączu Arduino */
+        trigger-gpios = <&gpioa 9 GPIO_ACTIVE_HIGH>;
+        /* PC7 odpowiada pinowi D9 na złączu Arduino */
+        echo-gpios = <&gpioc 7 GPIO_ACTIVE_HIGH>;
+        status = "okay";
+        };
     };
 
     &can1 {
@@ -28,13 +36,4 @@
 
     };
 
-    {
-    hc_sr04_0: hc-sr04 {
-        compatible = "elec,hc-sr04";
-        /* PA9 odpowiada pinowi D8 na złączu Arduino */
-        trigger-gpios = <&gpioa 9 GPIO_ACTIVE_HIGH>;
-        /* PC7 odpowiada pinowi D9 na złączu Arduino */
-        echo-gpios = <&gpioc 7 GPIO_ACTIVE_HIGH>;
-        status = "okay";
-        };
-    };
+ 

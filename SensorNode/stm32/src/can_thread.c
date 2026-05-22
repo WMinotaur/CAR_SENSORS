@@ -51,9 +51,9 @@ void can_thread_entry(void) {
   while(1) {
     struct sensor_data_msg sensor_data;
     if(k_msgq_get(&sensor_msgq, &sensor_data, K_FOREVER) == 0) {
-      LOG_INF("accel: %f, %f, %f | gyro: %f, %f, %f | temp: %f", (double)sensor_data.accel[0], (double)sensor_data.accel[1],
-              (double)sensor_data.accel[2], (double)sensor_data.gyro[0], (double)sensor_data.gyro[1], (double)sensor_data.gyro[2],
-              (double)sensor_data.temp);
+      // LOG_INF("accel: %f, %f, %f | gyro: %f, %f, %f | temp: %f", (double)sensor_data.accel[0], (double)sensor_data.accel[1],
+      //         (double)sensor_data.accel[2], (double)sensor_data.gyro[0], (double)sensor_data.gyro[1], (double)sensor_data.gyro[2],
+      //         (double)sensor_data.temp);
       /* Pack temp and 3-axis accel into 8 bytes (int16_t each, temp first) */
       int16_t temp_scaled = (int16_t)(sensor_data.temp * 100.0f);
       int16_t accel_x_scaled = (int16_t)(sensor_data.accel[0] * 100.0f);
@@ -73,11 +73,11 @@ void can_thread_entry(void) {
       tx_frame.data[7] = accel_z_scaled & 0xFF;
 
       int err = can_send(can_dev, &tx_frame, K_MSEC(10), NULL, NULL);
-      if(err == 0) {
-        LOG_INF(">>> Wysłano odczyty MPU6050 (CAN_ID: 0x123)");
-      } else {
-        LOG_ERR(">>> Blad wysylania na szynę CAN (kod: %d)", err);
-      }
+      // if(err == 0) {
+      //   LOG_INF(">>> Wysłano odczyty MPU6050 (CAN_ID: 0x123)");
+      // } else {
+      //   LOG_ERR(">>> Blad wysylania na szynę CAN (kod: %d)", err);
+      // }
 
       /* Send heartbeat periodically with 8-byte timestamp (microseconds) */
       uint64_t now_ms = k_uptime_get();
@@ -90,11 +90,11 @@ void can_thread_entry(void) {
           hb.data[i] = (ts_us >> (8 * i)) & 0xFF;
         }
         int hberr = can_send(can_dev, &hb, K_MSEC(10), NULL, NULL);
-        if(hberr == 0) {
-          LOG_INF(">>> Wysłano heartbeat (CAN_ID: 0x%03x)", HEARTBEAT_ID);
-        } else {
-          LOG_ERR(">>> Blad wysylania heartbeat (kod: %d)", hberr);
-        }
+        // if(hberr == 0) {
+        //   LOG_INF(">>> Wysłano heartbeat (CAN_ID: 0x%03x)", HEARTBEAT_ID);
+        // } else {
+        //   LOG_ERR(">>> Blad wysylania heartbeat (kod: %d)", hberr);
+        // }
       }
     }
   }
