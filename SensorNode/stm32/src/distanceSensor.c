@@ -49,17 +49,17 @@ static int process_hcsr04(const struct device *dev) {
 static void hcsr04_thread_entry(void *p1, void *p2, void *p3) {
   /* Pobranie wskaźnika na urządzenie na podstawie "compatible" z Devicetree.
      Działa analogicznie do DEVICE_DT_GET_ONE z Twojego kodu. */
-  const struct device *const hcsr04 = DEVICE_DT_GET(DT_NODELABEL(hc_sr04_0));
+  //   const struct device *const hcsr04 = DEVICE_DT_GET(DT_NODELABEL(hc_sr04_0));
 
-  if(!device_is_ready(hcsr04)) {
-    LOG_ERR("Urzadzenie %s nie jest gotowe do pracy!", hcsr04 ? hcsr04->name : "NULL");
-    return;
-  }
-const struct device *const hcsr04 = DEVICE_DT_GET(DT_NODELABEL(hc_sr04_0));
-  LOG_INF("Rozpoczynam odpytywanie czujnika HC-SR04 (Tryb Polling)...");
+  //   if(!device_is_ready(hcsr04)) {
+  //     LOG_ERR("Urzadzenie %s nie jest gotowe do pracy!", hcsr04 ? hcsr04->name : "NULL");
+  //     return;
+  //   }
+  // const struct device *const hcsr04 = DEVICE_DT_GET(DT_NODELABEL(hc_sr04_0));
+  //   LOG_INF("Rozpoczynam odpytywanie czujnika HC-SR04 (Tryb Polling)...");
 
   while(1) {
-    process_hcsr04(hcsr04);
+    // process_hcsr04(hcsr04);
     k_msleep(500); /* Próbkowanie co 500 ms */
   }
 }
