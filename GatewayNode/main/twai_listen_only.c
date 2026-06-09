@@ -12,12 +12,12 @@
 #include "esp_twai.h"
 #include "esp_twai_onchip.h"
 
-#define TWAI_LISTENER_TX_GPIO   -1  // Listen only node doesn't need TX pin
+#define TWAI_LISTENER_TX_GPIO   CONFIG_EXAMPLE_TWAI_TX_GPIO  // Listen only node doesn't need TX pin
 #define TWAI_LISTENER_RX_GPIO   CONFIG_EXAMPLE_TWAI_RX_GPIO
-#define TWAI_BITRATE            1000000
+#define TWAI_BITRATE            500000
 
 // Message IDs (must match sender)
-#define TWAI_DATA_ID            0x100
+#define TWAI_DATA_ID            0x123
 
 // Buffer for burst data handling
 #define POLL_DEPTH              200
@@ -99,7 +99,7 @@ void app_main(void)
         },
         .bit_timing.bitrate = TWAI_BITRATE,
         .timestamp_resolution_hz = 1000000,
-        .flags.enable_listen_only = true,
+        .tx_queue_depth = 10,  // <-- TA LINIA JEST KLUCZOWA, dodaj ją!
     };
 
     // Create TWAI node
