@@ -14,7 +14,7 @@
 
     &can1 {
         status = "okay";
-        bus-speed = <1000000>;
+        bus-speed = <500000>;
         pinctrl-0 = <&can1_rx_pa11 &can1_tx_pa12>;
         pinctrl-names = "default";
     };
@@ -31,9 +31,6 @@
             int-gpios = <&gpioc 4 GPIO_ACTIVE_HIGH>;
             smplrt-div = <249>;
         };
-        
 
 
     };
-
- 

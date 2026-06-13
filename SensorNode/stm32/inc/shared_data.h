@@ -9,10 +9,11 @@ struct sensor_data_msg {
   float gyro[3];
 };
 
- struct hcsr04_data_msg {
-  double distance_m;
+struct distance_data_msg {
+  float distance; 
 };
-
+  
 extern struct k_msgq sensor_msgq;
+extern struct k_msgq distance_msgq;
 
 #endif /* SHARED_DATA_H */

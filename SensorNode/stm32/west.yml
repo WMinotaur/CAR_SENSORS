@@ -17,4 +17,3 @@ manifest:
           - zcbor        
           - mcuboot      
           - segger
-          - hal_espressif
