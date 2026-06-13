@@ -9,4 +9,5 @@ build
 /zephyr/
 /tools/
 
-
+stm32/debug/*.jdebug
+stm32/debug/*.jdebug.user
