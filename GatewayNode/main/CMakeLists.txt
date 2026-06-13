@@ -1,5 +1,2 @@
-idf_component_register(
-    SRCS "twai_listen_only.c"
-    REQUIRES esp_driver_twai
-    INCLUDE_DIRS "."
-)
+idf_component_register(SRCS "main.cpp" "WiFiManager.cpp" "WebServerManager.cpp" "MotorController.cpp" "CanManager.cpp"
+                    INCLUDE_DIRS ".")

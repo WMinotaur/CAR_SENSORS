@@ -1,0 +1,27 @@
+
+
+OpenDocument="misc.h", FilePath="/home/wojciech/github/PWM-fan-controller/zephyr/include/zephyr/arch/arm/misc.h", Line=27
+OpenDocument="reset.S", FilePath="/home/wojciech/github/PWM-fan-controller/zephyr/arch/arm/core/cortex_m/reset.S", Line=136
+OpenDocument="assert.c", FilePath="/home/wojciech/github/PWM-fan-controller/zephyr/lib/os/assert.c", Line=9
+OpenDocument="cmsis_gcc.h", FilePath="/home/wojciech/github/PWM-fan-controller/modules/hal/cmsis_6/CMSIS/Core/Include/cmsis_gcc.h", Line=789
+OpenDocument="i2c_stm32_v2.c", FilePath="/home/wojciech/github/PWM-fan-controller/zephyr/drivers/i2c/i2c_stm32_v2.c", Line=1115
+OpenDocument="fault_s.S", FilePath="/home/wojciech/github/PWM-fan-controller/zephyr/arch/arm/core/cortex_m/fault_s.S", Line=69
+OpenToolbar="Debug", Floating=0, x=0, y=0
+OpenWindow="Registers 1", DockArea=RIGHT, x=0, y=1, w=300, h=149, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, FilteredItems=[], RefreshRate=1
+OpenWindow="Source Files", DockArea=LEFT, x=0, y=1, w=300, h=89, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Memory 1", DockArea=BOTTOM, x=2, y=0, w=154, h=688, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, EditorAddress=0x18
+OpenWindow="Watched Data 1", DockArea=LEFT, x=0, y=2, w=300, h=54, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Functions", DockArea=LEFT, x=0, y=0, w=300, h=89, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Terminal", DockArea=BOTTOM, x=1, y=0, w=1271, h=688, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Console", DockArea=BOTTOM, x=0, y=0, w=483, h=688, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Zephyr", DockArea=RIGHT, x=0, y=0, w=300, h=89, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, Showing="Task List"
+SmartViewPlugin="", Page="", Toolbar="Hidden", Window="SmartView 1"
+TableHeader="Functions", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Address";"Size";"#Insts";"Source"], ColWidths=[1470;100;100;100;693]
+TableHeader="Power Sampling", SortCol="None", SortOrder="ASCENDING", VisibleCols=["Index";"Time";"Ch 0"], ColWidths=[100;100;100]
+TableHeader="RegisterSelectionDialog", SortCol="None", SortOrder="ASCENDING", VisibleCols=[], ColWidths=[]
+TableHeader="Source Files", SortCol="File", SortOrder="ASCENDING", VisibleCols=["File";"Status";"Size";"#Insts";"Path"], ColWidths=[218;100;100;100;749]
+TableHeader="...", SortCol="None", SortOrder="ASCENDING", VisibleCols=["..."], ColWidths=[300]
+TableHeader="Task List", SortCol="None", SortOrder="ASCENDING", VisibleCols=["Threads";"TID";"Entry";"Priority";"Status";"Stack"], ColWidths=[110;110;110;110;110;110]
+TableHeader="Registers 1", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Value";"Description"], ColWidths=[100;105;259]
+TableHeader="Watched Data 1", SortCol="Expression", SortOrder="ASCENDING", VisibleCols=["Expression";"Value";"Location";"Refresh"], ColWidths=[100;100;100;100]
+TableHeader="TargetExceptionDialog", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Value";"Address";"Description"], ColWidths=[200;100;100;875]
